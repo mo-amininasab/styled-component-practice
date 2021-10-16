@@ -7,7 +7,8 @@ const HomePage: NextPage<Props> = () => {
   return (
     <div>
       <h1>home page</h1>
-      <Button>Test</Button>
+      <Button>Primary Button</Button>
+      <Button secondary>Secondary button</Button>
     </div>
   );
 };
