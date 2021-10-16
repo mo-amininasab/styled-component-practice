@@ -3,6 +3,7 @@ import Layout from '../components/layout/Layout';
 import styled from 'styled-components';
 import { Input } from '../components';
 import { useState } from 'react';
+import PasswordInput from '../components/common/PasswordInput';
 
 const Form = styled.form`
   width: 100%;
@@ -29,11 +30,11 @@ const LoginPage: NextPage<Props> = () => {
           name="username"
           placeholder="Username"
           value={username}
+          type='text'
           onChange={(e) => setUsername(e.target.value)}
         />
-        <Input
+        <PasswordInput
           name="password"
-          placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
