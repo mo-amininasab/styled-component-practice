@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { NextRouter, useRouter } from 'next/router';
 import styled from 'styled-components';
 
 const HeaderWrapper = styled.header`
@@ -29,7 +30,7 @@ interface StyledLinkProps {
   readonly isActive?: boolean;
 }
 
-// MenuAlt inherit all the styles from Menu, and can override them.
+// ! MenuAlt inherit all the styles from Menu, and can override them.
 const StyledLink = styled.a<StyledLinkProps>`
   padding: 4px 8px;
   display: block;
@@ -42,14 +43,16 @@ const StyledLink = styled.a<StyledLinkProps>`
 interface Props {}
 
 const Header: React.FC<Props> = (props) => {
+  const { pathname } = useRouter();
+
   return (
     <HeaderWrapper>
       <Menu>
         <Link href="/" passHref>
-          <StyledLink>Home</StyledLink>
+          <StyledLink isActive={pathname === '/'}>Home</StyledLink>
         </Link>
         <Link href="/login" passHref>
-          <StyledLink isActive>Login</StyledLink>
+          <StyledLink isActive={pathname === '/login'}>Login</StyledLink>
         </Link>
       </Menu>
     </HeaderWrapper>
