@@ -9,6 +9,7 @@ const HomePage: NextPage<Props> = () => {
       <h1>home page</h1>
       <Button>Primary Button</Button>
       <Button secondary>Secondary button</Button>
+      <Button large>Large button</Button>
     </div>
   );
 };
