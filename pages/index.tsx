@@ -1,16 +1,17 @@
-import { Button } from '../components/common';
+import { Button } from '../components';
 import { NextPage } from 'next';
+import Layout from '../components/layout/Layout';
 
 interface Props {}
 
 const HomePage: NextPage<Props> = () => {
   return (
-    <div>
-      <h1>home page</h1>
+    <Layout>
+      <p>home page</p>
       <Button>Primary Button</Button>
       <Button secondary>Secondary button</Button>
       <Button large>Large button</Button>
-    </div>
+    </Layout>
   );
 };
 
