@@ -20,16 +20,4 @@ const Button = styled.button`
   }
 `;
 
-// interface Props {
-
-// }
-
-// const Buttonn: React.FC<Props> = (props) => {
-//   return (
-//     <div>
-
-//     </div>
-//   )
-// }
-
-export default Button;
+export { Button };

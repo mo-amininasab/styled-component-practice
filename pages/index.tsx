@@ -1,19 +1,15 @@
-import Button from '../components/common/Button'
-import { NextPage } from 'next'
+import { Button } from '../components/common';
+import { NextPage } from 'next';
 
-interface Props {
-
-}
+interface Props {}
 
 const HomePage: NextPage<Props> = () => {
   return (
     <div>
       <h1>home page</h1>
-      <Button>
-        Test
-      </Button>
+      <Button>Test</Button>
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
